@@ -16,9 +16,9 @@
   },
   "homepage": "https://github.com/urielgudinouri-source/pfd#readme",
   "dependencies": {
-    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "express-validator": "^7.3.2",
     "mongodb": "^7.2.0"
   }
 }
