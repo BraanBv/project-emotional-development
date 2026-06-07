@@ -27,6 +27,10 @@ app.get('/results', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'results.html'));
 });
 
+app.get('/img/og-image.jpg', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/assets/images', 'favicon.png'))
+})
+
 app.use('/api/quizzes', quizRouter);
 app.use('/api/attempts', quizAttemptsRouter);
 app.use('/api/categories', categoriesRouter);
