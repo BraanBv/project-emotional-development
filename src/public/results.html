@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    
+    <title>QuizMaster - Tus resultados | Desarrollo Emocional</title>
+    <meta name="description" content="Resultado de tu test de personalidad. Descubre más sobre ti y comparte con amigos.">
+    <meta name="robots" content="noindex, follow">
+    
+    <meta property="og:title" content="Mi resultado en QuizMaster">
+    <meta property="og:description" content="Completé un test de desarrollo emocional. ¡Mira mi resultado!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://project-emotional-development.onrender.com/img/share-result.jpg">
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container results-container">
+        <div class="results-card">
+            <div class="confetti" id="confetti"></div>
+            
+            <div class="results-header">
+                <div class="result-badge">Resultado final</div>
+                <h1 id="resultTitle"></h1>
+                <p id="resultMessage"></p>
+            </div>
+
+            <div class="result-image" id="resultImage">
+                <img src="" alt="Resultado" id="resultImg">
+            </div>
+
+            <div class="result-description" id="resultDescription">
+            </div>
+
+            <div class="personality-traits" id="personalityTraits">
+            </div>
+
+            <div class="scores-container" id="scoresContainer">
+                <h3>Tu puntuación detallada</h3>
+                <div class="scores-grid" id="scoresGrid">
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn-primary" onclick="shareResult()">
+                    Compartir resultado
+                </button>
+                <button class="btn-primary" onclick="goToHome()">
+                    Volver al inicio
+                </button>
+                <button class="btn-primary" onclick="tryAnotherQuiz()">
+                    Probar otro quiz
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/results.js"></script>
+</body>
+</html>

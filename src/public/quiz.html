@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        
+        <title>QuizMaster - Respondiendo quiz | Desarrollo Emocional</title>
+        <meta name="description" content="Completa este test de desarrollo emocional y descubre aspectos de tu personalidad. Proyecto escolar.">
+        <meta name="robots" content="noindex, follow">
+        
+        <meta property="og:title" content="QuizMaster - Test emocional">
+        <meta property="og:description" content="Responde preguntas diseñadas para conocerte mejor.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://project-emotional-development.onrender.com/img/quiz-og.jpg">
+        
+        <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-container quiz-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="quiz-header">
+                <button class="btn-back" onclick="goBack()">← Volver</button>
+                <div class="quiz-info">
+                    <span class="quiz-category" id="quizCategory"></span>
+                    <h2 id="quizTitle"></h2>
+                    <p id="quizDescription"></p>
+                </div>
+                <div class="quiz-stats">
+                    <span class="question-counter">Pregunta <span id="currentQuestion">1</span> de <span id="totalQuestions">0</span></span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-card" id="questionCard">
+                    <h3 class="question-text" id="questionText"></h3>
+                    <div class="options-container" id="optionsContainer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button class="btn-primary" id="prevBtn" onclick="previousQuestion()" disabled>← Anterior</button>
+                <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Siguiente →</button>
+            </div>
+        </div>
+
+        <script src="./js/utils.js"></script>
+        <script src="./js/api.js"></script>
+        <script src="./js/quiz.js"></script>
+    </body>
+</html>

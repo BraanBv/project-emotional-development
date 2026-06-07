@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>hi</h1>
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        
+        <title>QuizMaster | Desarrollo Emocional - Descubre tu personalidad</title>
+        <meta name="description" content="QuizMaster: Tests de desarrollo emocional para conocer tu verdadera personalidad. Proyecto final escolar - 4° Semestre.">
+        <meta name="keywords" content="quiz, desarrollo emocional, personalidad, test psicológico, preguntas, autoestima, inteligencia emocional">
+        <meta name="author" content="Equipo Desarrollo Emocional - Preparatoria IPICO">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="Spanish">
+        <meta name="revisit-after" content="7 days">
+        
+        <meta property="og:title" content="QuizMaster - Desarrollo Emocional">
+        <meta property="og:description" content="Responde quizzes y descubre tu verdadera personalidad. Proyecto final escolar.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://project-emotional-development.onrender.com/">
+        <meta property="og:image" content="https://project-emotional-development.onrender.com/img/og-image.jpg">
+        <meta property="og:image:alt" content="QuizMaster - Tests de Desarrollo Emocional">
+        <meta property="og:site_name" content="QuizMaster">
+        <meta property="og:locale" content="es_MX">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="QuizMaster - Desarrollo Emocional">
+        <meta name="twitter:description" content="Tests para conocer tu personalidad. Proyecto escolar.">
+        <meta name="twitter:image" content="https://project-emotional-development.onrender.com/img/twitter-image.jpg">
+        
+        <link rel="canonical" href="https://project-emotional-development.onrender.com/">
+        
+        <link rel="icon" type="image/png" href="favicon.png">
+        
+        <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="app-container">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>QuizMaster</h1>
+                    </div>
+                    <nav class="nav">
+                        <a href="/" class="nav-link active">Inicio</a>
+                        <a href="#" class="nav-link">Categorías</a>
+                        <a href="#" class="nav-link">Ranking</a>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Descubre tu verdadera personalidad</h2>
+                    <p>Responde nuestros quizzes y descubre cosas increíbles sobre ti</p>
+                    <button class="btn-primary btn-large" onclick="scrollToCategories()">
+                        Comenzar ahora
+                    </button>
+                </div>
+            </section>
+
+            <section class="categories-section" id="categories">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Categorías disponibles</h2>
+                        <p>Elige un tema y comienza tu aventura</p>
+                    </div>
+                    <div class="categories-grid" id="categoriesGrid">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>¿Por qué elegir QuizMaster?</h2>
+                        <p>Una experiencia única para conocer más sobre ti</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Resultados precisos</h3>
+                            <p>Basados en análisis psicológico y metodologías probadas</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Rápido y divertido</h3>
+                            <p>Completa cada quiz en menos de 5 minutos</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Comparte tus resultados</h3>
+                            <p>Compara resultados con tus amigos en redes sociales</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <p>&copy; 2026 Proyecto Final - Desarrollo Emocional 4° Semestre</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/preparatoriaipicoficial" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.youtube.com/channel/UCCX8ougHeKPwSP4oma9WXpQ" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="aliasModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-header">
+                    <h3>¡Hola! </h3>
+                    <p>¿Cómo quieres que te llamemos?</p>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="aliasInput" placeholder="Ej: Aventurero2024" maxlength="30" autocomplete="off">
+                    <small>Este nombre aparecerá en tus resultados</small>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" onclick="startQuiz()">Comenzar quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/utils.js"></script>
+        <script src="./js/api.js"></script>
+        <script src="./js/categories.js"></script>
+    </body>
 </html>
